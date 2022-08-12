@@ -6,7 +6,7 @@ import Home from './pages/home'
 import Character from "./pages/character"
 import StarJediWoff from './StarJedi.woff'
 
-const hack = `/${process.env.BASE_NAME}/${StarJediWoff}`
+const hack = process.env.BASE_NAME ? `/${process.env.BASE_NAME}/${StarJediWoff}` : `/${StarJediWoff}`
 
 const theme = createTheme({
     typography: {

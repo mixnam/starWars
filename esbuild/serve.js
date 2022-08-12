@@ -36,7 +36,9 @@ serve({
             req.pipe(proxyReq, { end: true })
         })
 
-        server.listen(3000)
+        server.listen(3000, () => {
+            console.log("local dev server runing on http://localhost:3000")
+        })
         console.log(
             "esbuild serve static: http://localhost:8000"
         )
